@@ -1,0 +1,70 @@
+#include<stdio.h>
+struct admission
+{
+    int stud_id;
+    int age;
+    int marks;
+};
+typedef struct admission adm;
+int main()
+{
+    adm ad;
+    int a=0,m=0;
+    printf("enter student id number:\n");
+    scanf("%d",&ad.stud_id);
+    printf("input age:\n");
+    scanf("%d",&ad.age);
+    while(4==4)
+    {
+        if(a>=2)
+        {
+            printf("please confirm your date\n");
+            break;
+        }
+        if(ad.age<=20||ad.age>100)
+        {
+            printf("please input the valid age\n");
+            scanf("%d",&ad.age);
+        }
+        if(ad.age>20||ad.age<=100)
+        {
+            break;
+        }
+        a++;
+    }
+    if(a<2)
+    {
+        printf("please input marks:\n");
+        scanf("%d",&ad.marks);
+        while(4==4)
+        {
+            if(m>=2)
+            {
+                printf("please confirm your date \n");
+                break;
+            }
+            if("ad.marks<0||ad.marks>100")
+            {
+                printf("please inputbvalid marks\n");
+                scanf("%d",&ad.marks);
+                m++;
+            }
+            if(ad.marks>=0&&ad.marks<=100)
+            {
+                break;
+            }
+        }
+    }
+    if(a<2&&m<2)
+    {
+        if(ad.marks>65)
+        {
+            printf("congratulations.you have qualified for admission\n");
+        }
+        else
+        {
+            printf("you haven't qualified for the admission.better luck next time\n");
+        }
+    }
+    return 0;
+}
